@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side by side</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        header {
+            background-color: lightseagreen;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;            
+        }
+
+        /* 한 줄 다 사용하라고.. */
+        .box {
+            width: 100%;
+        }
+
+        .boxS {
+            float: left;
+            width: 33.3%;
+            border:1px solid white;
+            margin-bottom: 15px;            
+        }
+
+        .img-container {
+            margin-right: 8px;
+            box-shadow: 0px 2px 5px 0 lightgray;
+        }
+
+        .p { 
+            padding: 10px; 
+            margin: 0;
+        }
+
+        .img-container img { width: 100%; }
+
+        
+
+        .box::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Summer Holiday</h1>
+        </div>
+    </header>
+    <main>
+        <div class="box2">
+            <div class="boxS">
+                <div class="img-container">
+                    <img src="./images/img_5terre.jpg" alt="">
+                    <p class="p">5terre</p>
+                </div>
+            </div>
+
+            <div class="boxS">
+                <div class="img-container">
+                    <img src="./images/img_monterosso.jpg" alt="">
+                    <p class="p">Monterosso</p>
+                </div>
+            </div>   
+
+            <div class="boxS">
+                <div class="img-container">
+                    <img src="./images/img_vernazza.jpg" alt="">
+                    <p class="p">Vernazza</p>
+                </div>    
+            </div>  
+        </div>
+
+        <div class="box3">
+            <div class="boxS">
+                <div class="img-container">
+                    <img src="./images/img_manarola.jpg" alt="">
+                    <p class="p">Manarola</p>
+                </div>
+            </div>
+
+            <div class="boxS">
+                <div class="img-container">
+                    <img src="./images/img_corniglia.jpg" alt="">
+                    <p class="p">Corniglia</p>
+                </div>
+            </div>
+
+            <div class="boxS">   
+                <div class="img-container">
+                    <img src="./images/img_riomaggiore.jpg" alt="">
+                    <p class="p">Riomaggiore</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
