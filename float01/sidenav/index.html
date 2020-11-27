@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidenav</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Serif KR', serif;
+
+        }
+
+        .contents {
+            /* 왼쪽 사이드바 영역과 겹치지말라고 마진 값 200줌 */
+            margin-left: 200px;
+            /* 너무 왼쪽으로 쏠려서 띄어주기 */
+            padding-left: 20px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            /* 메인컨텐츠가 div, 즉 블럭, 한 줄 다 사용인데 그렇게 안 된 이유.  */
+            /* position: fixed; :  최상위 태그의 시작지점(0,0)을 기준으로 화면 전체에 고정되는 방식 */
+            /* top과 left는 position: fixed;를 써줬기 때문에 사용하는 것 */
+            position: fixed;
+            top: 0px;
+            /* 얘 때문에 왼쪽에 붙는다 */
+            left: 0px;
+            /* z-index : 하나의 위치에서 여러 태그가 겹쳐서 그려질 경우 화면에 표시되는 우선 순위를 표시하는 속성 */
+            /* 기본값은 0, 숫자가 클수록 우선순위가 높아진다.  */
+            z-index: 100;
+            /* 콘텐츠가 가로로 길어서 부모 태그의 영역을 벗어나서 튀어나가도 표시하지 않음. */
+            overflow-x: hidden;
+            background-color: #111111;
+        }
+
+        /* 사이드바의 위치 잡아주기 위해 ul을 따로 넣었다 */
+        .sidenav ul {
+            /* 처음 메뉴 누를 때 공간 살짝 띄워주기 위해 마진 8px 0px */
+            margin: 8px 0px;
+            /* list-style-type: none; */
+            padding: 0px;
+        }
+
+        
+        .sidenav a{
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            /* a 태그가 인라인이라서 block을 줌. 한 줄에 하나만 들어갈 것이라서 inline-block까지는 필요없고 그냥 block을 넣어줬다.  */
+            display: block;
+        }
+
+        .sidenav a:hover {
+            background-color: #dddddd;
+            color: black;
+        }
+
+        /* 클릭했을 경우~ */
+        .sidenav a:active {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">링크1</a></li>
+            <li><a href="#">링크2</a></li>
+            <li><a href="#">링크3</a></li>
+        </ul>
+    </div>
+
+    <div class="contents">
+        <h2>메인 컨텐츠</h2>
+        <p>메인 컨텐츠가 들어갈 자리</p>
+    </div>
+    
+</body>
+</html>
