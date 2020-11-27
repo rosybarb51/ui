@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images layout Quest 03</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgb(187, 174, 174);
+            text-align: center;
+            padding: 50px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #3d2921;
+        }
+
+        main {
+            /* width :너비가 고정된 값 */
+            /* max-width : 최대 너비를 설정하는 속성 */
+            /* min-width : 최소 너비를 설정하는 속성 */
+            max-width: 960px;
+            /* 중앙정렬공식 */
+            margin: 0 auto;
+        }
+
+        /* 너비를 100% 넣어줬는데, 또 마진값이 들어가면 뒤틀려버린다.*/
+        /* section {
+            margin: 50px;
+            ===> 틀린값!!!
+        } */
+
+        .section01 {
+            width: 70%;
+            /* 박스사이징이 보더사이즈라서 외부의 빈공간이기 때문에 마진을 쓰면 밑의값으로 밀려나니까, 내부공간을 주려고 패딩값을 줌. 상하는 안주고 좌우로 10픽셀씩 */
+            padding: 0 10px;
+        }
+        
+        .section02 { 
+            width: 30%;
+            padding: 0 10px;
+        }
+
+        .box01-img {
+            margin-bottom: 10px;
+        }
+
+        main .section01, main .section02 {
+            float: left;
+        }
+
+        
+        
+        .box01-img img {
+            width: 100%;
+        }
+
+    
+
+        .box01-text h2 {
+            margin: 0;
+            color: #704b3c;
+        }
+
+        
+        
+        .box02-text01 h2, .box02-text02 h2 {
+            margin: 0;
+            color: #704b3c;
+        }
+
+
+        main::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>고양이</h1>
+    </header>
+
+    <main>
+        <!-- section : 메인 컨텐츠 중 컨텐츠를 구분하는 태그, 주제가 달라지면 section을 추가해서 사용 -->
+        <!-- aside : 메인 컨텐츠 중 사이드바로 사용되는 태그 -->
+        <section class="section01">
+            <!-- article : 같은 주제의 다른 내용을 표시할 때 사용하는 태그 -->
+            <article class="box01-img">
+                <img src="./images/img_notebook.jpg" alt="">
+            </article>
+            <article class="box01-text">
+                <h2>고양이에 대하여</h2>
+                <p>한자로는 묘(猫)라 하고, 수고양이를 낭묘(郎猫), 암고양이를 여묘(女猫), 얼룩고양이를 표화묘(豹花猫), 들고양이를 야묘(野猫)로 부르기도 한다. 현재 집에서 기르고 있는 모든 애완용 고양이는 아프리카·남유럽·인도에 걸쳐 분포하는 리비아고양이(Felis silvestris lybica)를 사육 순화시킨 것으로, 전세계에서 2억 마리가 넘게 사육되는 것으로 알려져 있다. 약 5,000년 전 아프리카 북부 리비아산(産)의 야생고양이가 고대 이집트인에 의해 길들여져서 점차 세계 각지에 퍼졌다고 한다.</p>
+            </article>
+        </section>
+        <section class="section02">
+            <article class="box02-text01">
+                <h2>노르웨이숲고양이</h2>
+                <p>똑똑하여 사람을 잘 알아보며 독립적이다. 겁이 없고 호기심이 많아 집에서 키우는 경우 다른 고양이들과 달리 목줄을 메고 산책을 하기도 한다. 수 세기 동안 북유럽의 혹독한 자연환경에서 살아남아 왔기 때문인지 병치레가 적고 튼튼하다. 나무타기 등 활동적인 놀이를 즐기며 재빠르다.</p>
+            </article>
+            <article class="box02-text02">
+                <h2>코랫</h2>
+                <p>완전히 성장하는데 2~4년이 걸린다. 조용한 성격으로 영리하다. 외로움을 타는 경향이 있으며 주인에 대한 애정이 커 주인이나 가족의 근처에서 멀리 벗어나려 하지 않는다. 고집이 세고 독점욕이 있으며 다른 고양이들을 지배하려는 경향이 있다. 태국에서는 오랫동안 이 품종이 행운을 가져다준다고 믿어 왔으며 돈을 받고 팔기보다는 선물하는 일이 많다. 완전히 성장하는데 2~4년이 걸린다. </p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

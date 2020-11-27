@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images layout Quest 02_gangsanim</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        /* 최대한 전체 화면 다 쓸 수 있도록 */
+        html, body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            background-color: #2dcc8a;
+            /* 패딩: 컨텐츠와 테두리 사이 공간 */
+            /* 부모태그에서 패딩을 걸면, 자식테그인 h1을 둘러싸는 공간이 넓어져서 전체적인 공간이 넓어진다. 그러나 h1은 글자라서, 여기에 패딩을 걸면 영역이 꼬인다===> 많이 해보면서 확인하는 수 밖에 없다.  */
+            padding: 20px;
+        }
+
+        header h1 {
+            color : white;
+            /* header 영역 보다 h1 영역이 더 넓어져버리면 나중에 메인태그랑 벌어진다. */
+            /* 0 넣어주자 마진에-> 헤더부분에서 패딩값넣어주자 */
+            margin: 0px;
+        }
+
+        /* 메인콘텐츠 전체를 둘러싸고있음 section */
+        /* display : block 인 태그에 width의 크기를 지정하고, margin 값 중 left, right를 auto로 주면 중앙 정렬됨!! */
+        section {
+            /* 너비를 고정해버리면 왼쪽으로 붙어버린다. 왜냐하면 section은 기본적으로 div 이므로 block 타입이라서 한 줄을 다 쓴다. */
+            /* 무조건 960px을 쓰는 건 아니지만, 보통 960~1000 이 정도쯤 쓴다. */
+            width: 960px;
+            /* 앞에꺼: 상하값, 뒤에꺼 : 좌우값 */
+            /* 아래 문구는 "공식"이라고 보자. 외워서 쓰자 */
+            margin: 0 auto;
+        }
+
+        article {
+            /* article 은 지금 각 콘텐츠 하나씩을 포함한 영역인데, 제목부분과 각 아티클 부분을 조금 띄워주기 위해 마진 값을 넣어줬다. */
+            margin: 10px;
+        }
+
+        /* 이미지를 넣기 위한 공간 */
+        .box-img {
+            float: left;
+            width: 33%;
+        }
+        /* 부모 태그의 크기만큼 이미지의 크기를 설정하기 위함 */
+        /* 부모 태그의 크기가 줄어들면 밑의 이미지의 크기도 줄어든다는 말 */
+        .box-img img {
+            width: 100%;
+        }
+
+        /* 텍스트를 넣기 위한 공간 */
+        .box-text {
+            float: left;
+            width: 67%;
+            /* 글자가 이미지에 너무 붙어있어서. 패딩값 줌 */
+            padding: 15px;
+        }
+
+        /* 박스이미지와 박스 텍스트에 float:left를 걸어줬으니까 부모태그에서 클리어해주자 */
+        main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>제목부분</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <div class="box-img">
+                    <img src="./images/img_5terre.jpg" alt="">
+                </div>
+                <div class="box-text">
+                    <h2>5 Terre</h2>
+                    <p>At tacimates instructior eos, mei ex graeci reprimique. Percipit splendide ea usu, doctus maiorum laboramus mea at. In omnium accumsan definiebas qui. Has cu aliquip singulis, ne qui dicta facilis. Cum no tincidunt delicatissimi, eum in nihil consectetuer, te has duis dicit euripidis.</p>
+                </div>
+            </article>
+            <article>
+                <div class="box-img">
+                    <img src="./images/img_5terre.jpg" alt="">
+                </div>
+                <div class="box-text">
+                    <h2>5 Terre</h2>
+                    <p>At tacimates instructior eos, mei ex graeci reprimique. Percipit splendide ea usu, doctus maiorum laboramus mea at. In omnium accumsan definiebas qui. Has cu aliquip singulis, ne qui dicta facilis. Cum no tincidunt delicatissimi, eum in nihil consectetuer, te has duis dicit euripidis.</p>
+                </div>
+            </article>
+            <article>
+                <div class="box-img">
+                    <img src="./images/img_5terre.jpg" alt="">
+                </div>
+                <div class="box-text">
+                    <h2>5 Terre</h2>
+                    <p>At tacimates instructior eos, mei ex graeci reprimique. Percipit splendide ea usu, doctus maiorum laboramus mea at. In omnium accumsan definiebas qui. Has cu aliquip singulis, ne qui dicta facilis. Cum no tincidunt delicatissimi, eum in nihil consectetuer, te has duis dicit euripidis.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

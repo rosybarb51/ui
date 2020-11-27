@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images layout Quest 02</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        header {
+            background-color: darkcyan;
+            color: white;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        
+        body {
+            margin: 0;
+        }
+
+       
+        .box01 {
+            float: left;
+            padding: 0px;
+            margin-left: 100px;
+            border: 0;
+        }
+
+        .boxI {
+            float: left;
+            padding-top: 5px;
+            padding-right: 20px;
+        }
+        
+        .boxC{
+            padding: 0px;
+            overflow: hidden;   
+        }
+        
+        .h2 { margin: 0px ; }
+
+        main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Summer Holiday</h2>
+    </header>
+
+    <main>
+        <div class="box01">
+            <div class="boxI">
+                <img src="./images/img_5terre.jpg" alt="">
+            </div>
+            <div class="boxC">
+                <h3>5 Terre</h3>
+                <p>At tacimates instructior eos, mei ex graeci reprimique. Percipit splendide ea usu, doctus maiorum laboramus mea at. In omnium accumsan definiebas qui. Has cu aliquip singulis, ne qui dicta facilis. Cum no tincidunt delicatissimi, eum in nihil consectetuer, te has duis dicit euripidis.</p>
+            </div>   
+        </div>
+        <div class="box01">
+            <div class="boxI">
+                <img src="./images/img_monterosso.jpg" alt="">
+            </div>
+            <div class="boxC">    
+                <h3>Monterosso</h3>
+                <p>Sea fuisset menandri ei. Congue discere pri ad, et sea quidam option civibus, ut ludus dolorum ocurreret est. Decore integre ne est, alii alienum officiis ius ut, solet congue facilisi sed an. Maiorum deserunt ex vel. Quo alii duis probo eu, impetus aperiam corpora has ex. Sint facer repudiare vel no.</p>
+            </div>
+        </div>
+        <div class="box01">
+            <div class="boxI">
+                <img src="./images/img_vernazza.jpg" alt="">
+            </div>    
+            <div class="boxC">
+                <h3>vernazza</h3>
+                <p>Iusto deterruisset ex eam, et dicit commodo usu, amet eius deleniti qui eu. Iuvaret nominati corrumpit duo ea, stet iusto audiam nec ea. Ut debet munere eos, no etiam quidam pericula pri, praesent petentium an duo. Atomorum urbanitas an pro. In quot munere forensibus pri, audiam vivendo lobortis cu quo, munere dicunt repudiandae eu usu.</p>
+            </div>
+        </div>
+    </main>
+    
+    
+</body>
+</html>
