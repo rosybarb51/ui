@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topnav</title>
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        body {     
+            margin: 0;
+        }
+
+       
+        nav ul {       
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            text-decoration: none;
+            padding: 30px;
+        }
+
+        nav li a:hover {
+            background-color: #dddddd;
+            color: black;
+        }
+
+        nav::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    
+        .boxa, .boxb, .boxc {
+            float: left;
+            width: 33.3%;
+            padding: 10px;
+            height: 300px;
+            text-align: center;
+        }
+
+        .boxa {
+            background-color: rosybrown;
+        }
+        
+        .boxb {
+            background-color: sandybrown;
+        }
+        
+        .boxc {
+            background-color: seagreen;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <nav>
+        <ul>          
+            <li><a href="#">home</a></li>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+        </ul>      
+    </nav>
+    <main>
+        <div class="boxa">컨텐츠 1 </div>
+        <div class="boxb">컨텐츠 2 </div>
+        <div class="boxc">컨텐츠 3 </div>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+
+</html>
