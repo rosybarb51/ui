@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topnav</title>
+
+    <!-- 1)) 구글폰트 들어가서 마음에 드는 폰트 고른 후 Selected family 누른 후 use on the web 부분 복사해서 style 태그 위에 붙여넣어주기 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            /* 너비와 높이의 기준을 border 영역까지 포함 */
+            box-sizing: border-box;
+            /* 페이지 전체의 폰트를 적용 */
+            /* 2)) 위의 구글폰트에서 use on the web 복사 한 것 밑에 CSS rules to specify families 부분을 복사해서 * {} 안에 넣어서 전체 페이지에 적용시켜준다. */
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        body {
+            /* body에 마진 값 0을 주면 F12해서 보면 body 부분이 페이지 끝까지 꽉 차있음. */
+            /* 마진이나 패딩에 0 넣을 땐 px 꼭 안 붙여줘도 된다. */
+            margin: 0;
+        }
+
+        /* 2. ul 태그 안에 li 태그 안에 a 태그 넣어서 사용하는 방법 */
+        /* ul태그는 기본적으로 세로로 목록이 나오는 태그 */
+        nav ul {
+            /* ul의 기본 구분자를 화면에서 없애줌 (목록앞의 점.) */
+            list-style-type: none;
+            /* 마진과 패딩에 0을 넣어줘야 빈공간이 안 생기고 꽉찬 메뉴가 나타남.  */
+            /* 상단부분(Header)에 메뉴 뿐만 아니라 상단 이미지가 들어갈 것이기때문에 붕 뜨는 부분이 생길 수 있음.  */
+            margin: 0px;
+            /* ul의 컨텐츠는 지금 li 태그임. 그래서 패딩을 0을 해줘야 ul태그가 외부 공간을 삭제하여 다른 태그와 최대한 붙어있게 표시함 */
+            /* 컨텐츠까지의 내부 공간을 삭제하여 컨텐츠 영역(여기서는 ul의 컨텐츠는 li) 내에서 공간을 설정할 수 있도록 해줌 */
+            /* ==> 그래서 나머지 공간 컨트롤을 ul 밑의 li 나 a 태그에 맡긴다. */
+            /* 그래서 padding을 0으로 주고 web F12로 확인해보면, 밑에 a 태그에서 설정한 크기가 곧 ul, li의 크기가 된다.  */
+            padding: 0px;
+            /* overflow: 해당 태그의 자손 태그가 해당 태그의 크기보다 클 경우 화면에 표시하는 방식 => 얘도 메뉴 만들 때 공식처럼 사용하는 태그임. hidden까지 */
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        nav li {
+            /* 해당 태그를 위로 띄워서 정렬하는 속성 */
+            /* display : block 인 태그도 inline 속성인 것처럼 한 라인에 정렬이 가능함 */
+            float: left;
+        }
+
+        /* 위에서 설명한대로, nav 태그에서 실제 메인 컨텐츠인 a 태그에서 실제 사용할 공간 컨트롤을 함.  */
+        nav li a {
+            /* a 태그는 display:block 이나 inline-block 을 사용하여 padding, margin 을 사용할 수 있음.(원래 사용 불가능.. a 태그는 인라인임. display:inline 은 마진, 탑, 바텀 무시함. height 컨텐츠의 크기로 정해짐. 패딩탑, 패딩바텀을 사용가능. 그러나 그 영역을 보장하지는 않음. ) */
+            display: inline-block;
+            color: #f2f2f2;
+            /* 글자를 중앙정렬 */
+            text-align: center;
+            /* a 태그의 밑줄을 none으로 해서 없앰 */
+            text-decoration: none;
+            /* a 태그의 외부 테두리 영역과 컨텐츠 영역 사이의 공간을 마련해줌 */
+            /* 위에서 display:inline-block 을 사용했기때문에 밑에처럼 패딩을 사용할 수 있음 */
+            /* block이 아니라 inline-block을 사용한 이유는 한 줄에 여러 개가 들어가기 때문 */
+            /* 위의 text-align: center 와 padding 을 같이 사용하여 실제 컨텐츠가 정 중앙에 표시되는 효과를 준다. 패딩을 줘야함.  */
+            padding: 15px;
+        }
+
+        /* a:hover을 사용하여 마우스가 해당 태그 위에 올라갔을 경우 마치 해당 태그를 선택한 것처럼 보이게 하는 효과 */
+        nav li a:hover {
+            background-color: #dddddd;
+            color: black;
+        }
+
+        /* 위에서 li 태그가 float:left 사용했으니까 밑은 필수! */
+        /* 다른 태그에 영향이 가지 않도록 clear 시켜 줌 */
+        /* 사실 ul 태그에 걸어줘도 되는데, 그냥 nav 태그에 걸어줬다. (지금은 네브 밑에 ul 만있으니까 가능, 나중에 다른 태그도 같이 사용한다면 이 부분 고려해볼것..) */
+        nav::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        /* 1. a 태그만 사용한 방식일 때의 CSS */
+        /* nav {
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #dddddd;
+            color: black;            
+        } */
+
+        main {
+            background-color: #dddddd;
+            padding: 10px;
+            height: 300px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <nav>
+        <!-- 1. a 태그만 사용하는 방법 : 많이 사용 안 한다.  -->
+        <!-- href에 주소 안 쓰고 #을 쓰면 다른 곳으로 이동 하지 않게 함. -->
+        <!-- <a href="#">링크1</a>
+            <a href="#">링크2</a>
+            <a href="#">링크3</a> -->
+
+        <!-- 2. ul 태그 안에 li 태그 안에 a 태그 넣어서 사용하는 방법 : 관리가 쉬워서 이 방법을 많이 사용한다.  -->
+        <ul>
+            <!-- home 부분에 이미지 넣는 방식을 많이 사용한다. -->
+            <!-- 메뉴에 영문자와 한글을 넣으면 폰트 크기가 달라서 호버 했을 때 밑에 남는 부분이 있다. => 이런 부분 때문에 font-family로 통일시키고 간다. 근데 지금 사용한 부분이 한글폰트는 아니어서 통일이 안됨. 구글에 구글폰트 들어가서 korean 들어가서 다운 받아쓰거나, 서체전문업체가서 구입해서 사용하자.  -->
+            <li><a href="#">home</a></li>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+        </ul>
+        
+
+    </nav>
+    <main>
+        <h2>Main Contents</h2>
+        <p>메인 컨텐츠가 들어갈 자리</p>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+
+</html>
