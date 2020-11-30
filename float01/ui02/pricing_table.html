@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Tables 가 포함된 레이아웃 만들기</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            padding: 15px;
+        }
+
+        header h2 {
+            font-weight: normal;
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 960px;
+        }
+
+        .top {
+            margin: 20px;
+        }
+
+        .box01, .box02, .box03 {
+            width: 32%;    
+            border-left: 1px solid rgb(209, 208, 208);
+            border-right: 1px solid rgb(209, 208, 208);           
+        }
+        .box01 div, .box02 div, .box03 div {
+            text-align: center;
+            border-bottom: 1px solid rgb(209, 208, 208);
+            padding: 20px 5px;
+        }
+        .div01 {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 25px;
+        }
+
+        .div06 h2, {
+            font-size: 30px;
+        }
+
+        .div06 .pgray {
+            color: gray;
+        }
+
+        .div07 {
+            padding: 37px;
+            background-color: rgb(241, 239, 239);
+        }
+
+        .div07 aside {
+            padding: 8px 15px;
+            position: relative;
+            left: 33.3%;
+            width: 100px; 
+            background-color: rgb(63, 163, 63);
+            color: white;
+        }
+
+        .div07 aside:hover {
+            /* cursor : 마우스 포인터 속성 */
+            cursor: pointer;
+            background-color: rgb(196, 196, 196);
+            color: black;
+        }
+
+        .box01, .box02, .box03 {
+            float: left;
+        }
+
+        .box01:hover, .box02:hover, .box03:hover {
+            box-shadow: 0 0 10px slategray;
+        }
+
+        main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Responsive Pricing Tables</h2>
+    </header>
+    <main>
+        <div class="top">
+            <div class="box01">       
+                <div class="div01">
+                    <p style="font-size: 26px;">Basic</p>
+                </div>
+                <div class="div02">
+                    <p><strong>10GB</strong> Storage</p>
+                </div>
+                <div class="div03">
+                    <p><strong>10</strong> Emails</p>
+                </div>
+                <div class="div04">
+                    <p><strong>10</strong> Domains</p>
+                </div>
+                <div class="div05">
+                    <p><strong>Endless</strong> Support</p>
+                </div>
+                <div class="div06">
+                    <h2><strong>$ 10</strong></h2>
+                    <p class="pgray">per month</p>
+                </div>
+                <div class="div07">
+                    <aside >Sign up</aside>
+                </div>
+            </div>    
+        </div>    
+        <div class="top"> 
+            <div class="box02">    
+                <div class="div01">
+                    <p style="font-size: 26px;">Pro</p>
+                </div>
+                <div class="div02">
+                    <p><strong>25GB</strong> Storage</p>
+                </div>
+                <div class="div03">
+                    <p><strong>25</strong> Emails</p>
+                </div>
+                <div class="div04">
+                    <p><strong>25</strong> Domains</p>
+                </div>
+                <div class="div05">
+                    <p><strong>Endless</strong> Support</p>
+                </div>
+                <div class="div06">
+                    <h2><strong>$ 25</strong></h2>
+                    <p class="pgray">per month</p>
+                </div>
+                <div class="div07">
+                    <aside>Sign up</aside>
+                </div>
+            </div>      
+        </div>    
+        <div class="top">
+            <div class="box03">       
+                <div class="div01">
+                    <p style="font-size: 26px;">Premium</p>
+                </div>
+                <div class="div02">
+                    <p><strong>50GB</strong> Storage</p>
+                </div>
+                <div class="div03">
+                    <p><strong>50</strong> Emails</p>
+                </div>
+                <div class="div04">
+                    <p><strong>50</strong> Domains</p>
+                </div>
+                <div class="div05">
+                    <p><strong>Endless</strong> Support</p>
+                </div>
+                <div class="div06">
+                    <h2><strong>$ 50</strong></h2>
+                    <p class="pgray">per month</p>
+                </div>
+                <div class="div07">
+                    <aside >Sign up</aside>
+                </div>
+            </div>
+        </div>    
+    </main>
+</body>
+</html>

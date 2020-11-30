@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wine 링크 통한 여러 개 홈페이지 만들기</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box-title {
+            padding: 2px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: lightseagreen;
+            color: white;
+        }
+
+        .box-a1 {
+            float: left;
+        }
+
+        .box-a2 {
+            float: right;
+        }
+
+        .box-a1 a,
+        .box-a2 a {
+            text-decoration: none;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .box-title::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .img img {
+            width: 100%;
+        }
+
+        .box-table table {
+            width: 100%;
+        }
+        table {
+            border: 1px solid lightgrey;
+            border-collapse: collapse;
+        }
+
+        .section01 th, .section01 td {
+            border-bottom: 1px solid lightgrey;
+            padding: 10px;
+            
+        }
+
+        .box-table tr:nth-child(2n) {
+            background-color: white;
+        }
+
+        
+        .box-table tr:nth-child(2n+1) {
+            background-color: rgb(243, 243, 243);
+        }
+
+        .box-table th {
+            background-color: lightseagreen;
+            text-align: left;
+            font-weight: bold;
+            color: white;
+        }
+
+        .section01 {
+            width: 70%;
+        }
+
+        .section02 {
+            width: 30%;
+        }
+        .section01, .section02 {
+            float: left;
+            padding: 20px;
+        }
+
+        main {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .section02 h2{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="box-title">
+            <h1>White Wines - Chardonnay</h1>
+            <div class="box-a1">
+                <a href="wine_hompage2.html">&#171;</a>
+            </div>
+            <div class="box-a2">
+                <a href="wine_hompage2.html">&#187;</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section01">
+            <div class="img">
+                <img src="img_chardonnay.jpg" alt="">
+            </div>
+            <div class="box-table">
+                <h3>Food</h3>
+                <table>
+                    <th>Food</th>
+                    <th>Type</th>
+                    <tr>
+                        <td>Seafood</td>
+                        <td>Shripmps, Crab, Lobster</td>
+                    </tr>
+                    <tr>
+                        <td>Meat</td>
+                        <td>Chicken, Pork</td>
+                    </tr>
+                    <tr>
+                        <td>Cheese</td>
+                        <td>Brie, Gruyere</td>
+                    </tr>
+                    <tr>
+                        <td>Other</td>
+                        <td>Cream Sauces</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="box-table">
+                <h3>Flavors</h3>
+                <table>
+                    <th>Age</th>
+                    <th>Flavor</th>
+                    <tr>
+                        <td>Less Ripe</td>
+                        <td>Green Plum, Green Apple, Pear</td>
+                    </tr>
+                    <tr>
+                        <td>Medium</td>
+                        <td>Lemon, Peach, Melon</td>
+                    </tr>
+                    <tr>
+                        <td>More Ripe</td>
+                        <td>Pineapple, Fig, Banana, Mango</td>
+                    </tr>
+                    <tr>
+                        <td>Oaked</td>
+                        <td>added Cream or Butter</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="box-table">
+                <h3>Neighbors</h3>
+                <table>
+                    <th>Neighbor</th>
+                    <th>Flavor</th>
+                    <tr>
+                        <td>Pinot Gris</td>
+                        <td>Like under-riped Chardonnay</td>
+                    </tr>
+                    <tr>
+                        <td>Semillion</td>
+                        <td>Lighter with more lemon</td>
+                    </tr>
+                    <tr>
+                        <td>Viognier</td>
+                        <td>More Vanilla, Flowers or Perfume</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="section02">
+            <div>
+                <h2>Chardonnay</h2>
+                <div>
+                    <p>Chardonnay is the world's most popular wine grape. <br><br>
+
+                        The taste of the Chardonnay grape is very neutral and easy to like.<br><br>
+
+                        Many of the Chardonnay flavors are derived from terroir and oak-aging.<br><br>
+
+                        The flavors varies from noticeable acidity (Cold Climates), to crisply and mineral (Chablis,
+                        France) with flavors of green plum, apple and pear, to heavy oak and tropical fruit flavors (the
+                        New World).<br><br>
+
+                        In cooler climates Chardonnay tends to be under-riped.<br><br>
+
+                        In warmer climates the flavors tend to vary from lemon to peach and melon.<br><br>
+
+                        In very warm climates Chardonnay tends to be over-riped.<br><br>
+
+                        Oaked Chardonnay tends to have softer acidity and more fruit flavors with added butter, cream
+                        and hazelnut notes.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

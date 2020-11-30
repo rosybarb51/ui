@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us, 아이콘 포함한 레이아웃 만들기</title>
+
+    <!-- icon을 사용하기 위해서 font awesome 로드 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Serif KR', serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* text-aline 속성은 자식, 후손 태그에게 그대로 상속됨 */
+        section {
+            text-align: center;
+        }
+        .box {
+            box-shadow: 0 0 10px darkgray;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgb(248, 246, 246);
+        }
+
+        /* font-weight : 속성은 100~900까지, 기본값/normal : 400 */
+        /* bold :700 */
+        .box h2 {
+            text-align: center;
+            color: cornflowerblue;
+            font-size: 30px;
+        }
+        .box input {
+            width: 90%;
+            overflow: hidden;
+        }
+
+        .box div {
+            padding: 10px;
+        }
+        .box div i {
+            position: absolute;
+            left: 35px;
+            font-size: 40px;
+            padding: 5px;
+            margin-left: 0;
+            color: cornflowerblue;
+        }
+
+        .box div input {
+            height: 38px;
+            border: 1px solid darkgray;
+            text-transform: none;
+            position: relative;
+        }
+
+        /* 버튼 위치 가운데 정렬하기 */
+        .btn {
+            margin: 10px auto;
+            display: block;
+            color: white;
+            background-color: cornflowerblue;
+            width: 80px;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .btn:hover {
+            background-color: lightgray;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <h2>Contact Us</h2>
+            <div>
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="First Name">
+            </div>
+            <div>
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <input type="text" placeholder="Email">
+            </div>
+            <div>
+                <i class="fa fa-address-card-o"></i>
+                <input type="text" placeholder="010-1234-5678">
+            </div>
+            <div>
+                <i class="fa fa-book"></i>
+                <input type="text" placeholder="Message">
+            </div>
+            <div class="btn">
+                <p>Sign up</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

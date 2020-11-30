@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui3</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        header {
+            background-color: lightgray;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 4em;
+        }
+
+        main {
+            /* width : 너비가 고정된 값
+            max-width : 최대 너비를 설정하는 속성
+            min-width : 최소 너비를 설정하는 속성 */
+            max-width: 960px;
+            /* 중앙 정렬 */
+            margin: 0 auto;
+        }
+
+        section {
+            float: left;
+            width: 75%;
+            padding: 0 10px;
+        }
+
+        aside {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .box-img img {
+            width: 100%;
+        }
+
+        .news-side {
+            padding: 10px;
+            background-color: lightgray;
+            margin-bottom: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weekly Ping</h1>
+    </header>
+
+    <main>
+        <!-- section : 메인 컨텐츠 중 컨텐츠를 구분하는 태그, 주제가 달라지면 section을 추가해서 사용 -->
+        <section>
+            <!-- article : 같은 주제의 다른 내용을 표시할때 사용하는 태그 -->
+            <article>
+                <div class="box-img">
+                    <img src="./images/img_notebook.jpg" alt="">
+                </div>
+                <div class="box-text">
+                    <h2>Empty Notebook Found</h2>
+                    <p>모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다. 행정권은 대통령을 수반으로 하는 정부에 속한다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다.</p>
+                    <p>법원은 최고법원인 대법원과 각급법원으로 조직된다. 근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다. 통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다.</p>
+                    <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을 둔다.
+                    </p>
+                    <p>국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다.</p>
+                </div>
+            </article>
+        </section>
+        <!-- aside : 메인 컨텐츠 중 사이드바로 사용되는 태그 -->
+        <aside>
+            <div class="news-side">
+                <h2>Very New News!</h2>
+                <p>군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 환경권의 내용과 행사에 관하여는 법률로 정한다. 정당의 설립은 자유이며, 복수정당제는 보장된다.</p>
+            </div>
+            <div class="news-side">
+                <h2>Very New News!</h2>
+                <p>군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 환경권의 내용과 행사에 관하여는 법률로 정한다. 정당의 설립은 자유이며, 복수정당제는 보장된다.</p>
+            </div>
+            <div class="news-side">
+                <h2>Very New News!</h2>
+                <p>군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 환경권의 내용과 행사에 관하여는 법률로 정한다. 정당의 설립은 자유이며, 복수정당제는 보장된다.</p>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
