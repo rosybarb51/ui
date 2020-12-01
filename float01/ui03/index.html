@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3scholls 홈페이지 만들기</title>
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            padding: 0 ;
+            position: fixed;
+            width: 100%;
+        }
+        
+        .title01 {
+            background-color: white;
+            border-top: ;
+        }
+        .img {
+            float:left;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .img img {
+            width: 90%;
+        }
+
+        header .title02 {
+            float: right;
+            padding-top: 10px;
+        } 
+
+        header .title02 h2 {
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 5px;
+        }
+
+        /* float clear는 무조건 부모 태그에서 해주자. 다른 애들한테 영향간다. */
+        .title01::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        nav {
+           background-color: rgb(95, 170, 85); 
+           padding: 0;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+
+        nav ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        nav li a {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 15px;
+        }
+
+        nav li a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* ////////////// 여기서부터 사이드바//////////////// */
+
+        aside {
+            width: 235px;
+            height: 100px;
+            position: fixed;
+            top: 120px;
+            left: 0;
+        }
+
+        aside ul {
+            list-style-type: none;
+            margin: 8px 0;
+            padding: 0;
+        }
+
+        aside ul li {
+            padding: 0;
+        }
+
+        aside h2 {
+            font-weight: 400;
+            font-size: 22px;
+            padding-left: 15px;
+        }
+        aside ul a {
+           text-decoration: none; 
+           font-size: 15px;
+           color: black;
+           padding: 8px 15px;
+           display: block;
+        }
+
+        aside ul a:hover {
+            background-color: lightgray;
+        }
+        section {
+            margin-left: 200px;
+            padding-left: 50px;
+            padding-top: 120px;
+        }
+
+        .art01, .art02, .art03 {
+            background-color: rgb(245, 245, 245);
+            margin-right: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px darkgray;
+            padding: 20px;
+        }
+
+        .h1 {
+            font-size: 55px;
+        }
+        
+        .h2 {
+            padding: 20px 0;
+        }
+
+        .h2 h2 {
+            font-weight: normal;
+        }
+
+        .btn01, .btn02, .btn03  {
+            color: white;
+            background-color:  rgb(95, 170, 85);
+            padding: 10px 15px;
+            /* 버튼 테두리 없애기!! */
+            border: 0;
+            outline: 0;
+        }
+
+        .btn01:hover, .btn02:hover, .btn03:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .box {
+            background-color: white;
+            margin: 20px 0;
+            padding: 10px 10px;
+            border-left: 3px solid rgb(95, 170, 85);
+        }
+
+        .art03 {
+            padding: 50px;
+        }
+        .art03 h4{
+            text-align: center;
+            font-weight: normal;
+            color: rgb(83, 83, 83);
+            text-decoration: underline;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title01">
+            <div class="img">
+                <img src="./images/w3schools.png" alt="">
+            </div>
+            <div class="title02">
+                <h2>THE WORLD'S LARGEST WEB DEVELOPER SITE</h2>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">TUTORIALS</a></li>
+                <li><a href="#">REFERENCES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Tutorials</h2>
+            <ul>
+                <li><a href="#">Learn HTML</a></li>
+                <li><a href="#">Learn CSS</a></li>
+                <li><a href="#">Learn W3.CSS</a></li>
+                <li><a href="#">Learn Colors</a></li>
+                <li><a href="#">Learn JavaScript</a></li>
+                <li><a href="#">Learn XML</a></li>
+                <li><a href="#">Learn SQL</a></li>
+                <li><a href="#">Learn PHP</a></li>
+            </ul>
+        </aside>
+        <section>
+            <article class="art01">
+                <div class="h1">
+                    <p>CSS</p>
+                </div>
+                <div class="h2">
+                    <h2>The Language for Styling Web Pages</h2>
+                </div>
+                <div>
+                    <button class="btn01">LEARN CSS</button>
+                    <button class="btn02">CSS REFERENCE</button>
+                </div>
+                <div class="box">
+                    <p>body {<br>
+                        &nbsp;background-color: #d0e4fe;<br>
+                    }<br>
+                    h1 {<br>
+                        &nbsp;color: orange;<br>
+                        &nbsp;text-align: center;<br>
+                    }<br>
+                    p {<br>
+                        &nbsp;font-family: "Times New Roman";<br>
+                        &nbsp;font-size: 20px;<br>
+                    }</p>
+                </div>
+                <div>
+                    <button class="btn03">Try it yourself</button>
+                </div>
+            </article>
+            <article class="art02">
+                <div class="h1">
+                    <p>JS</p>
+                </div>
+                <div class="h2">
+                    <h2>The Language for Programming Web Pages</h2>
+                </div>
+                <div>
+                    <button class="btn01">LEARN JS</button>
+                    <button class="btn02">JS REFERENCE</button>
+                </div>
+                <div class="box">
+                    <p>// Click the button to change the color of this paragraph<br><br>
+
+                        &nbsp;function myFunction() {<br>
+                            &nbsp;&nbsp;var x;<br>
+                            &nbsp;&nbsp;x = document.getElementById("demo");<br>
+                            &nbsp;&nbsp;x.style.fontSize = "25px";<br>
+                            &nbsp;&nbsp;x.style.color = "red";<br>
+                        }</p>
+                </div>
+                <div>
+                    <button class="btn03">Try it yourself</button>
+                </div>
+            </article>
+            <article class="art03">
+                <h4>FORUM  |  ABOUT</h4>
+            </article>    
+        </section>
+    </main>
+</body>
+</html>

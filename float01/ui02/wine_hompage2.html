@@ -15,15 +15,22 @@
         }
 
         body {
+            /* 밑에 애들 그냥 *에 넣어주자.  */
             padding: 0;
             margin: 0;
         }
 
         header {
+            /* 여기에 마진 바텀 15를 줘서 헤더 밑에 벌어진 부분 만들어주자.  */
+            /* 메인에서 마진 탑을 15로 줘도 된다. 대신해서. css 는 몇몇가지 공식이외에 정답이 없으므로... 자기가 만들어가는 것.. */
+            /* 여기서 배경색도 넣어주자 */
+            /* 패딩 15정도 주자 */
             padding: 0;
             margin: 0;
         }
 
+        /* header h1에 폰트웨이트 노말로 넣어줘서 얇게 만들어주자. 뚱뚱한 거 안 이뿌니까 */
+        /* 제목 부분은 의미상 h1으로 써주고 (시멘틱) 필요한 부분은 속성 변경해주는 형태로 사용해주자, 크기 줄이고 굵기 줄이고~ */
         .box-title {
             padding: 2px;
             padding-left: 20px;
@@ -31,7 +38,7 @@
             background-color: lightseagreen;
             color: white;
         }
-
+        /* 꺾새 왼쪽 오른쪽 배치 ... 긋  */
         .box-a1 {
             float: left;
         }
@@ -54,33 +61,44 @@
             clear: both;
         }
 
+        /* 이미지는 너비 백프로 줘서 언제나 크기를 최대로 사용하겠다는 의미  */
         .img img {
             width: 100%;
         }
 
+        /* 그냥 테이블에 넣어주면 컨텐츠 크기에 따라서 표의 크기가 달라지므로 테이블 마다 크기가 달라진다. 그래서 그냥 table에 위드 백프로 줘야한다. 화면 전체에 쓰겠다는 의미로.  */
         .box-table table {
             width: 100%;
         }
+
+        
         table {
-            border: 1px solid lightgrey;
+            /* 테이블의 각각의 column 의 인접 테두리 선을 하나로 합하여 줌. */
             border-collapse: collapse;
         }
 
+
         .section01 th, .section01 td {
-            border-bottom: 1px solid lightgrey;
             padding: 10px;
+            /* 보더 논으로 줘야 줄이 없어짐 */
+            border: none;
             
         }
 
+        /* 2n 대신 even 넣어서 짝수 선택해도 됨 */
         .box-table tr:nth-child(2n) {
             background-color: white;
         }
 
-        
+        /* 표가 있을 때 짝수 별로 선택할지, 홀수 별로 선택할지 고르는 것 */
+        /* nth-child() : 주로 표 사용 시 짝수 혹은 홀수 별로 선택하기위한 선택자 */
+        /* odd(홀수), even(짝수) */
+        /* 2n+1 대신 odd 넣어서 홀수 선택해도 됨 */
         .box-table tr:nth-child(2n+1) {
             background-color: rgb(243, 243, 243);
         }
 
+        
         .box-table th {
             background-color: lightseagreen;
             text-align: left;
@@ -95,18 +113,26 @@
         .section02 {
             width: 30%;
         }
+       
         .section01, .section02 {
+            /* 패딩에 0 10px 넣어주자 위에서 메인에도 넣어줘서 좌우측에 10px씩 각각 두번 확보해서 총 20px 씩 좌우로 확보한다.   */
             float: left;
             padding: 20px;
         }
 
+        /* div.pic 는 태그선택자로 태그명이 div이면서 클래스 명이 pic 인 것을 선택하는 것임. 점 앞에 띄우지 않고 태그이름, 점 뒤에 클래스명 */
+        /* div가 여러가지 인데 클래스명이 pic 인 것을 고른 것임. */
+
         main {
+            /* 메인 값에 패딩 0 10px 넣어주자. 상하값 0, 좌우값 10px 보통 이렇게 한다. 강사님이..  */
             content: "";
             display: table;
             clear: both;
         }
 
         .section02 h2{
+            /* 폰트웨이트 400이나 노말 줘서 얇게 해주자 뚱뚱해서 보기싫으면. */
+            /* 마진 16픽셀 0 줘서 상하값 16씩 줘서 이미지와 밑의 표와 공간을 띄워주자. 좌우는 굳이 줄 필요 없으니까 0 */
             font-size: 30px;
         }
     </style>
@@ -117,7 +143,9 @@
     <header>
         <div class="box-title">
             <h1>Wite Wines - Saunignon Blanc</h1>
+            <!-- nav : div와 동일한 태그, 네비게이션바 및 메뉴바를 표시하는 태그 (시멘틱 태그) -->
             <div class="box-a1">
+                <!-- 꺾새 모양은 html 특수기호 사용해도 되고, w3schools 의 폰트 어썸을 넣어줘도 된다.  -->
                 <a href="wine_hompage1.html">&#171;</a>
             </div>
             <div class="box-a2">
@@ -127,6 +155,8 @@
     </header>
 
     <main>
+        <!-- main 내에 주제별로 section을 구분을 둔다.  -->
+        <!-- section 안에서 또 나눌 때는 article로 나눈다.  -->
         <section class="section01">
             <div class="img">
                 <img src="img_sauvignon_blanc.jpg" alt="">
