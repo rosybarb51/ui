@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 7</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 사이드바 -->
+    <aside>
+        <!-- 가로형 네비게이션바 -->
+        <nav class="h-nav">
+            <ul>
+                <li><a href="#"><i class="fa fa-camera"></i></a></li>
+                <li><a href="#"><i class="fa fa-camera"></i></a></li>
+                <li><a href="#"><i class="fa fa-camera"></i></a></li>
+            </ul>
+        </nav>
+        <div>
+            <img src="./images/w3schools.png" alt="">
+        </div>
+        <!-- 세로형 네비게이션바 -->
+        <nav class="v-nav">
+            <ul>
+                <li><a href="#">Learn HTML</a></li>
+                <li><a href="#">Learn CSS</a></li>
+                <li><a href="#">Learn Responsive Web</a></li>
+                <li><a href="#">Learn JavaScript</a></li>
+                <li><a href="#">Learn JQuery</a></li>
+                <li><a href="#">Learn Hybrid App</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- 메인 컨텐츠 영역 -->
+    <main>
+        <!-- header 영역 -->
+        <section class="header">
+            <h1>W3Schools.com</h1>
+        </section>
+        <!-- 컨텐츠 영역 -->
+        <section>
+            <div class="card">
+                <h1>CSS</h1>
+                <p>The Language for Styling Web Pages</p>
+                <button>LEARN CSS</button>
+                <button>CSS REFERENCE</button>
+
+                <div class="code">
+                    <p><span class="tag">body</span> {</p>
+                    <p><span class="attr">background-color</span>: <span class="value">#d0e4fe</span>;</p>
+                    <p>}</p>
+                    <br>
+                    <p><span class="tag">h1</span> {</p>
+                    <p><span class="attr">color</span>: <span class="value">orange</span>;</p>
+                    <p><span class="attr">text-align</span>: <span class="value">center</span>;</p>
+                    <p>}</p>
+                    <br>
+                    <p><span class="tag">p</span> {</p>
+                    <p><span class="attr">font-family</span>: <span class="value">"Times New Roman"</span>;</p>
+                    <p><span class="attr">font-size</span>: <span class="value">20px</span>;</p>
+                    <p>}</p>
+                </div>
+                <button>Try it Yourself</button>
+            </div>
+
+            <div class="card">
+                <h1>JS</h1>
+                <p>The Language for Programming Web Pages</p>
+                <button>LEARN JS</button>
+                <button>JS REFERENCE</button>
+
+                <div class="code">
+                    <p style="color: green;">// Click the button to change the color of this paragraph</p>
+                    <br>
+                    <p><span class="func">function</span> myFunction() {</p>
+                    <p><span class="value" style="margin-left: 48px;">var</span> x;</p>
+                    <p style="padding-left: 48px;">x = document.getElementById(<span class="tag">"demo"</span>);</p>
+                    <p style="padding-left: 48px;">x.style.fontSize = <span class="tag">"25px"</span>;</p>
+                    <p style="padding-left: 48px;">x.style.color = <span class="tag">"red"</span>;</p>
+                    <p>}</p>
+                </div>
+                <button>Try it Yourself</button>
+            </div>
+        </section>
+        <section class="footer">
+            <div>
+                <!-- a 태그는 기본적으로 display: inline 방식 -->
+                <a href="#">FORUM</a>
+                |
+                <a href="#">ABOUT</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

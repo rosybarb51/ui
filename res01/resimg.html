@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지</title>
+
+    <style>
+
+    /* 
+    반응형 웹 사용 시 이미지 출력 방법
+    - 기존의 이미지 출력 방식을 사용하게 되면 반응형 웹 적용 시 이미지의 크기가 고정되어 있어 제대로 표현되지 않을 가능성이 높음
+    - width 속성 : width를 %로 표기, height를 auto로 설정
+    - max-width 속성 : width 대신 max-width를 사용하고 %로 표기, height를 auto로 설정     
+    */
+
+        #div01 .img-width img {
+            width: 100%;
+            height: auto;
+        }
+
+        
+        #div03 .img-max-width img {
+            /* 
+            max-width : 최대 너비를 설정
+            min-width : 최소 너비를 설정
+            **주의 >> max-width 를 설정하고 width 에 고정값을 주면 max-width가 동작하지 않음
+            */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #div04 .imgCh {
+            height: 400px;
+            background-image: url("./images/cat01.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media screen and (max-width : 768px) {
+           #div04 .imgCh { background-image: url("./images/cat02.jpg"); }
+        }
+        
+        @media screen and (max-width : 567px) {
+            #div04 .imgCh { background-image: url("./images/cat01.jpg"); }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>width 사용 시</h3>
+        <div class="img-width">
+            <img src="./images/tom01.jpg" alt="">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <h3>기본</h3>
+        <div class="img-max-width">
+            <img src="./images/tom01.jpg" alt="">
+        </div>
+    </div>
+    
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>max-width 사용 시</h3>
+        <div class="img-max-width">
+            <img src="./images/tom01.jpg" alt="">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <h3>화면 크기에 따른 이미지 변경</h3>
+
+        <div class="imgCh">
+            <h4>미디어 쿼리를 사용하여 이미지 변경</h4>
+        </div>
+        <br>
+        <div>
+            <h4>picture 태그를 사용하여 이미지 변경</h4>
+            <picture>
+                <!-- max-width 가 작은 값을 먼저 변경 -->
+                <!-- 미디어쿼리는 작은 값을 나중에 썼었다. -->
+                <!-- source 태그의 media 속성값은 미디어쿼리 -->
+                <source srcset="./images/cat01.jpg" media="(max-width:567px)">
+                <source srcset="./images/cat02.jpg" media="(max-width:768px)">
+                <source srcset="./images/cat03.jpg">
+                <img src=".images/cat03.jpg" alt="">
+            </picture>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

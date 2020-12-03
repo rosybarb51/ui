@@ -1,0 +1,157 @@
+/* css 전체 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { font-size: 16px; }
+
+/* 사이드바 */
+aside div {
+    /* 이미지 왼쪽 부분 여백 */
+    padding: 8px 16px;
+    border-bottom: 1px solid lightgray;
+}
+
+aside div img { width: 80%; }
+
+/* 네비게이션바 생성 공식 */
+aside .h-nav ul {
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* 가로형 네비게이션 바 생성 */
+aside .h-nav li {
+    float: left;
+    /* li 태그가 모든 크기를 다 차지하도록 설정 */
+    width: 33.3%;
+}
+
+aside .h-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+aside .h-nav li a:hover {
+    color: black;
+    background-color: lightgray;
+}
+
+/* 세로형 네비게이션 바 */
+/* li에 float을 사용하지 않음 */
+aside .v-nav ul {
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+aside .v-nav li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+}
+
+aside .v-nav li a:hover {
+    background-color: lightgray;
+}
+
+aside .h-nav i {
+    /* rem 단위는 해당 html 문서의 기본 폰트 크기에 비례하여 크기를 설정 함 */
+    /* html 태그에 font-size: 16px 지정하였으므로 1.5em은 24px이 됨 */
+    font-size: 1.5rem;
+}
+
+aside {
+    float: left;
+    width: 300px;
+    height: 100%;
+}
+
+main {
+    float: left;
+    width: 81%;
+}
+
+main section {
+    margin-bottom: 16px;
+}
+
+.header {
+    background-color: #009688;
+    text-align: center;
+    padding: 64px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    padding: 24px;
+    color: white;
+}
+
+.card, .footer {
+    padding: 12px 24px;
+    margin-bottom: 16px;
+    background-color: lightgray;
+}
+
+.card > * {
+    margin: 8px 0px;
+}
+
+.card h1 {
+    font-size: 64px;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 24px;
+}
+
+.card button {
+    color: white;
+    font-size: 16px;
+    border: none;
+    background-color: teal;
+    padding: 8px 16px;
+}
+
+.card button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.card div {
+    border-left: 5px solid teal;
+    padding: 8px 16px;
+}
+
+.card .code p {
+    font-size: 16px;
+}
+
+.tag { color: sienna; }
+.value { color: blue; }
+.attr {
+    color: red;
+    margin-left: 48px;
+}
+
+.footer {
+    color: gray;
+    padding: 32px 16px;
+}
+
+.footer a {
+    color: gray;
+}

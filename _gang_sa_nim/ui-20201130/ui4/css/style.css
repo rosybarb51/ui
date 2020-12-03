@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* text-align 속성은 후손태그들에게 상속됨 */
+form { text-align: center; }
+form > div {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 20px;
+    background-color: lightgrey;
+}
+
+.input-line > div {
+    float: left;
+    font-size: 32px;
+    padding: 10px;
+}
+
+.input-line .input-icon {
+    width: 50px;
+}
+
+.input-line .input-text {
+    overflow: hidden;
+    width: 96%;
+}
+
+.input-line i {
+    color: #2196F3;
+}
+.input-line input {
+    font-size: 24px;
+    width: 100%;
+    padding: 8px;
+    display: block;
+}
+
+.input-line::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1 {
+    color: #2196F3;
+    /* font-weight: 속성은 100 ~ 900까지, 기본값/normal/400, bold/700 */
+    font-weight: 400;
+}
+
+button {
+    color: white;
+    background-color: #2196F3;
+    font-size: 1.3em;
+    width: 100px;
+    height: 50px;
+    border: none;
+}

@@ -1,0 +1,192 @@
+/* css 전체 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 제목 부분 */
+header {
+    padding-top: 16px;
+}
+
+header div {
+    position: relative;
+}
+
+header img {
+    /* 헤더의 좌측에 위치 */
+    float: left;
+}
+
+header p {
+    /* 부모태그의 시작위치를 기반으로 하여 원하는 위치에 배치가 가능함 */
+    position: absolute;
+    /* 오른쪽을 기준으로 16px 이동한 곳에 p태그를 그려줌 */
+    right: 16px;
+    /* 헤더의 우측에 위치 */
+    /* float: right; */
+    bottom: 0;
+    font-size: 16px;
+    text-align: right;
+    /* 글자 사이 간격 */
+    letter-spacing: 5px;
+    /* 줄간격 */
+    line-height: 2;
+}
+
+header > div { padding: 10px 15px; }
+/* 이미지 및 텍스트 float사용 해제 */
+header > div::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header nav {
+    background-color: teal;
+}
+
+/* 네비게이션 바 공식 */
+header nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    /* background-color: teal; */
+}
+
+/* float 을 사용하여 세로 리스트를 가로형 리스트로 변경 */
+header nav li {
+    float: left;
+}
+
+header nav li a {
+    /* a태그의 padding영역과 margin 영역을 확보하기 위해서 display:block로 변경 */
+    display: block;
+    color: white;
+    text-align: center;
+    /* a 태그의 전체 공간을 확보하기 위함 */
+    padding: 15px;
+    /* a 태그의 밑줄 제거 */
+    text-decoration: none;
+    font-weight: 700;
+    /* letter-spacing: 1px; */
+}
+
+/* 메뉴 선택 시 */
+header nav li a:hover {
+    background-color: white;
+    color: black;
+}
+
+main {
+    padding: 16px;
+}
+
+/* 사이드 바와 메인 컨텐츠 영역 float 해제 */
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 사이드 바 영역 */
+aside {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+/* 사이드 바 제목 */
+aside div h3 {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* 사이드바 메뉴 */
+aside ul {
+    /* 목록 앞에 점을 없애줌 */
+    list-style-type: none;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+aside li a {
+    /* a 태그의 영역 확대를 위해서 사용 */
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 8px 0px;
+    text-decoration: none;
+}
+
+aside li a:hover {
+    background-color: lightgray;
+}
+
+/* 메인 컨텐츠 영역 */
+section {
+    float: left;
+    width: 80%;
+    padding-left: 16px;
+}
+
+/* 메인 컨텐츠 영역의 각각의 컨텐츠 */
+.card, .footer {
+    /* box-shadow : 오른쪽그림자  아래그림자  흐림정도  색상 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 12px 24px;
+    /* 아래의 컨텐츠 영역과 공간을 두기 위해서 사용 */
+    margin-bottom: 16px;
+    background-color: lightgray;
+}
+
+.card > * {
+    margin: 8px 0px;
+}
+
+.card h1 {
+    font-size: 64px;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 24px;
+}
+
+.card button {
+    color: white;
+    font-size: 16px;
+    /* 3D입체형식의 테두리선을 없앰 */
+    border: none;
+    background-color: teal;
+    padding: 8px 16px;
+}
+
+.card button:hover {
+    color: black;
+    background-color: white;
+    /* 마우스 포인터 변경 */
+    cursor: pointer;
+}
+
+.card div {
+    border-left: 5px solid teal;
+    padding: 8px 16px;
+}
+
+.card .code p {
+    font-size: 16px;
+}
+
+.tag { color: sienna; }
+.value { color: blue; }
+.attr {
+    color: red;
+    margin-left: 48px;
+}
+
+.footer {
+    text-align: center;
+    padding: 32px 16px;
+}

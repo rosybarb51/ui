@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout4</title>
+
+    <!-- icon을 사용하기 위해서 font awesome 로드 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 사용자 정보를 입력받아서 지정한 서버로 데이터 전송 -->
+    <!-- form 태그 안에 있는 input 태그의 정보만 서버로 전송 -->
+    <form action="">
+        <div>
+            <div class="title">
+                <h1>Contact Us</h1>
+            </div>
+            <!-- input 태그와 icon 을 사용하기 위한 div -->
+            <div class="input-line">
+                <!-- icon을 사용하기 위한 div, 다른 아이콘들과 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <!-- 사용자 입력을 받는 input 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한 div -->
+                <div class="input-text">
+                    <!-- input의 display속성을 block 변경, width: 100%로 설정 -->
+                    <input type="text" placeholder="First name">
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" placeholder="Last name">
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-envelope-o"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" placeholder="Email">
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" placeholder="Phone">
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="input-icon">
+                    <i class="fa fa-pencil"></i>
+                </div>
+                <div class="input-text">
+                    <input type="text" placeholder="Message">
+                </div>
+            </div>
+            <div class="send">
+                <button>Send</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

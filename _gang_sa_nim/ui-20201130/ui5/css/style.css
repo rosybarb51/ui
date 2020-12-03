@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: teal;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    color: white;
+    font-weight: normal;
+    font-size: 35px;
+}
+
+header .left {
+    float: left;
+}
+
+header .right {
+    float: right;
+    text-align: right;
+}
+
+.fa {
+    color: white;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+main {
+    padding: 0px 10px;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    float: left;
+    width: 66%;
+    padding: 0px 10px;
+}
+
+div.pic, div.pic > img { width: 100%; }
+
+div.info h2 {
+    font-weight: 400;
+    margin: 16px 0px;
+}
+
+div.info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+div.info th, div.info td {
+    padding-left: 10px;
+    border: none;
+}
+
+div.info th {
+    background-color: teal;
+    color: white;
+}
+
+div.info tr {
+    height: 50px;
+    text-align: left;
+}
+
+div.info tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.right {
+    float: left;
+    width: 33%;
+    padding: 0px 10px;
+}
+
+.right > * {
+    margin: 15px 0px;
+    font-weight: 400;
+}
+
+.right h1 {
+    font-size: 36px;
+}
