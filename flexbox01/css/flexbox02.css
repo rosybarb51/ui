@@ -1,0 +1,26 @@
+.flex-container {
+    display: flex;
+    background-color: plum;
+}
+
+.flex-container > div {
+    background-color: paleturquoise;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#div01 .order { align-items: stretch;}
+
+#div02 .grow { align-items: stretch;}
+
+#div03 .shrink { align-items: stretch;}
+
+#div04 .basis { align-items: stretch; }
+
+#div05 .flex { align-items: stretch; }
+
+#div06 .self { height: 200px; }
